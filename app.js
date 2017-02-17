@@ -4,9 +4,19 @@ const GroceryList = () => (
     </ul>
 );
 
-function GroceryListItem (props) {
-  return <li>{props.item}</li>;
+class GroceryListItem extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render () {
+    return (
+      <li>{this.props.item}</li>
+    )
+  }
 }
+
+
 
 
 function GroceryListItems () {
