@@ -1,11 +1,17 @@
 const GroceryList = () => (
     <ul>
-      <li />
-      <li />
+      <Cucumbers />
+      <Kale />
     </ul>
 );
 
-const
+const Cucumbers = () => (
+  <li>Cucumbers</li>
+)
+
+const Kale = () => (
+  <li>Kale</li>
+)
 // function GroceryListItem (props) {
 //   return <li>{props.item}</li>;
 // }
