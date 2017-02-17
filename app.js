@@ -1,26 +1,18 @@
 const GroceryList = () => (
     <ul>
-      <Cucumbers />
-      <Kale />
+      {GroceryListItems()}
     </ul>
 );
 
-const Cucumbers = () => (
-  <li>Cucumbers</li>
-)
+function GroceryListItem (props) {
+  return <li>{props.item}</li>;
+}
 
-const Kale = () => (
-  <li>Kale</li>
-)
-// function GroceryListItem (props) {
-//   return <li>{props.item}</li>;
-// }
-//
-//
-// function GroceryListItems () {
-//   const groceries = ['Cucumbers', 'Kale'];
-//
-//   return groceries.map((item) => <GroceryListItem key={item} item={item} />)
-// }
+
+function GroceryListItems () {
+  const groceries = ['Cucumbers', 'Kale'];
+
+  return groceries.map((item) => <GroceryListItem key={item} item={item} />)
+}
 
 ReactDOM.render(<GroceryList />, document.getElementById("app"));
